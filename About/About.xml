@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>CloseAll</name>
+	<author>GoryMoon</author>
+	<supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>
+	<packageId>GoryMoon.CloseAll</packageId>
+	<url></url>
+	<description>A mod that adds an alert above the letters allowing you to close all at once</description>
+	<modDependencies>
+	</modDependencies>
+	<loadAfter>
+	</loadAfter>
+</ModMetaData>
