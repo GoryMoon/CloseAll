@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using HarmonyLib;
@@ -21,12 +22,12 @@ namespace CloseAll
 
         protected override void OnClick()
         {
-            Find.LetterStack.LettersListForReading.ListFullCopy().ForEach(letter => Find.LetterStack.RemoveLetter(letter));
+            Find.LetterStack.LettersListForReading.ListFullCopy().Where(letter => letter.CanDismissWithRightClick).Do(letter => Find.LetterStack.RemoveLetter(letter));
         }
 
         public override AlertReport GetReport()
         {
-            return Find.LetterStack.LettersListForReading.Count > 0;
+            return Find.LetterStack.LettersListForReading.Any(letter => letter.CanDismissWithRightClick);
         }
     }
 
